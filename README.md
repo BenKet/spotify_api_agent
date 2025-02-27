@@ -2,6 +2,9 @@
 
 This repository contains two distinct implementations of an AI agent designed to interact with APIs, specifically focusing on the application of Chain of Thought (CoT) in the planning phase.
 
+## Demo Video
+https://github.com/user-attachments/assets/0b20a88d-254a-4691-b518-7fa860ac92e6
+
 ## Repository Structure
 
 This repository is organized into two main folders:
