@@ -1,0 +1,339 @@
+### Interpretation Prompt:
+
+Based on the following information:
+
+- **Question:** List all tracks from the album 'Immunity'
+- **Executed API Request:** https://api.spotify.com/v1/albums/4kkVGtCqE2NiAKosri9Rnd/tracks?market=US
+- **API Response:** {
+  "href": "https://api.spotify.com/v1/albums/4kkVGtCqE2NiAKosri9Rnd/tracks?offset=0&limit=20&market=US",
+  "items": [
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3l0CmX0FuQjFxr8SK7Vqag"
+          },
+          "href": "https://api.spotify.com/v1/artists/3l0CmX0FuQjFxr8SK7Vqag",
+          "id": "3l0CmX0FuQjFxr8SK7Vqag",
+          "name": "Clairo",
+          "type": "artist",
+          "uri": "spotify:artist:3l0CmX0FuQjFxr8SK7Vqag"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 213000,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3jgrNd3uPU1c2PFBKYsV9d"
+      },
+      "href": "https://api.spotify.com/v1/tracks/3jgrNd3uPU1c2PFBKYsV9d",
+      "id": "3jgrNd3uPU1c2PFBKYsV9d",
+      "is_playable": true,
+      "name": "Alewife",
+      "preview_url": null,
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:3jgrNd3uPU1c2PFBKYsV9d",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3l0CmX0FuQjFxr8SK7Vqag"
+          },
+          "href": "https://api.spotify.com/v1/artists/3l0CmX0FuQjFxr8SK7Vqag",
+          "id": "3l0CmX0FuQjFxr8SK7Vqag",
+          "name": "Clairo",
+          "type": "artist",
+          "uri": "spotify:artist:3l0CmX0FuQjFxr8SK7Vqag"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 230346,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/71WT6kvVYlGba71B65JrH4"
+      },
+      "href": "https://api.spotify.com/v1/tracks/71WT6kvVYlGba71B65JrH4",
+      "id": "71WT6kvVYlGba71B65JrH4",
+      "is_playable": true,
+      "name": "Impossible",
+      "preview_url": null,
+      "track_number": 2,
+      "type": "track",
+      "uri": "spotify:track:71WT6kvVYlGba71B65JrH4",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3l0CmX0FuQjFxr8SK7Vqag"
+          },
+          "href": "https://api.spotify.com/v1/artists/3l0CmX0FuQjFxr8SK7Vqag",
+          "id": "3l0CmX0FuQjFxr8SK7Vqag",
+          "name": "Clairo",
+          "type": "artist",
+          "uri": "spotify:artist:3l0CmX0FuQjFxr8SK7Vqag"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 184293,
+      "explicit": true,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3r2TFFPynN97CgmzXKal5X"
+      },
+      "href": "https://api.spotify.com/v1/tracks/3r2TFFPynN97CgmzXKal5X",
+      "id": "3r2TFFPynN97CgmzXKal5X",
+      "is_playable": true,
+      "name": "Closer To You",
+      "preview_url": null,
+      "track_number": 3,
+      "type": "track",
+      "uri": "spotify:track:3r2TFFPynN97CgmzXKal5X",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3l0CmX0FuQjFxr8SK7Vqag"
+          },
+          "href": "https://api.spotify.com/v1/artists/3l0CmX0FuQjFxr8SK7Vqag",
+          "id": "3l0CmX0FuQjFxr8SK7Vqag",
+          "name": "Clairo",
+          "type": "artist",
+          "uri": "spotify:artist:3l0CmX0FuQjFxr8SK7Vqag"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 213253,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0zzz9l8ZX5vDBJmNHnWOom"
+      },
+      "href": "https://api.spotify.com/v1/tracks/0zzz9l8ZX5vDBJmNHnWOom",
+      "id": "0zzz9l8ZX5vDBJmNHnWOom",
+      "is_playable": true,
+      "name": "North",
+      "preview_url": null,
+      "track_number": 4,
+      "type": "track",
+      "uri": "spotify:track:0zzz9l8ZX5vDBJmNHnWOom",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3l0CmX0FuQjFxr8SK7Vqag"
+          },
+          "href": "https://api.spotify.com/v1/artists/3l0CmX0FuQjFxr8SK7Vqag",
+          "id": "3l0CmX0FuQjFxr8SK7Vqag",
+          "name": "Clairo",
+          "type": "artist",
+          "uri": "spotify:artist:3l0CmX0FuQjFxr8SK7Vqag"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 260519,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6UFivO2zqqPFPoQYsEMuCc"
+      },
+      "href": "https://api.spotify.com/v1/tracks/6UFivO2zqqPFPoQYsEMuCc",
+      "id": "6UFivO2zqqPFPoQYsEMuCc",
+      "is_playable": true,
+      "name": "Bags",
+      "preview_url": null,
+      "track_number": 5,
+      "type": "track",
+      "uri": "spotify:track:6UFivO2zqqPFPoQYsEMuCc",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3l0CmX0FuQjFxr8SK7Vqag"
+          },
+          "href": "https://api.spotify.com/v1/artists/3l0CmX0FuQjFxr8SK7Vqag",
+          "id": "3l0CmX0FuQjFxr8SK7Vqag",
+          "name": "Clairo",
+          "type": "artist",
+          "uri": "spotify:artist:3l0CmX0FuQjFxr8SK7Vqag"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 185306,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4PvbbMYL4fkToni5BLaYRb"
+      },
+      "href": "https://api.spotify.com/v1/tracks/4PvbbMYL4fkToni5BLaYRb",
+      "id": "4PvbbMYL4fkToni5BLaYRb",
+      "is_playable": true,
+      "name": "Softly",
+      "preview_url": null,
+      "track_number": 6,
+      "type": "track",
+      "uri": "spotify:track:4PvbbMYL4fkToni5BLaYRb",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3l0CmX0FuQjFxr8SK7Vqag"
+          },
+          "href": "https://api.spotify.com/v1/artists/3l0CmX0FuQjFxr8SK7Vqag",
+          "id": "3l0CmX0FuQjFxr8SK7Vqag",
+          "name": "Clairo",
+          "type": "artist",
+          "uri": "spotify:artist:3l0CmX0FuQjFxr8SK7Vqag"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 188386,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/7B3z0ySL9Rr0XvZEAjWZzM"
+      },
+      "href": "https://api.spotify.com/v1/tracks/7B3z0ySL9Rr0XvZEAjWZzM",
+      "id": "7B3z0ySL9Rr0XvZEAjWZzM",
+      "is_playable": true,
+      "name": "Sofia",
+      "preview_url": null,
+      "track_number": 7,
+      "type": "track",
+      "uri": "spotify:track:7B3z0ySL9Rr0XvZEAjWZzM",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3l0CmX0FuQjFxr8SK7Vqag"
+          },
+          "href": "https://api.spotify.com/v1/artists/3l0CmX0FuQjFxr8SK7Vqag",
+          "id": "3l0CmX0FuQjFxr8SK7Vqag",
+          "name": "Clairo",
+          "type": "artist",
+          "uri": "spotify:artist:3l0CmX0FuQjFxr8SK7Vqag"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 181253,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/08IFMDAxF7Se7X8RNyoQWF"
+      },
+      "href": "https://api.spotify.com/v1/tracks/08IFMDAxF7Se7X8RNyoQWF",
+      "id": "08IFMDAxF7Se7X8RNyoQWF",
+      "is_playable": true,
+      "name": "White Flag",
+      "preview_url": null,
+      "track_number": 8,
+      "type": "track",
+      "uri": "spotify:track:08IFMDAxF7Se7X8RNyoQWF",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3l0CmX0FuQjFxr8SK7Vqag"
+          },
+          "href": "https://api.spotify.com/v1/artists/3l0CmX0FuQjFxr8SK7Vqag",
+          "id": "3l0CmX0FuQjFxr8SK7Vqag",
+          "name": "Clairo",
+          "type": "artist",
+          "uri": "spotify:artist:3l0CmX0FuQjFxr8SK7Vqag"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 176800,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/27vN7hM1uXKgkjtSCwKkkb"
+      },
+      "href": "https://api.spotify.com/v1/tracks/27vN7hM1uXKgkjtSCwKkkb",
+      "id": "27vN7hM1uXKgkjtSCwKkkb",
+      "is_playable": true,
+      "name": "Feel Something",
+      "preview_url": null,
+      "track_number": 9,
+      "type": "track",
+      "uri": "spotify:track:27vN7hM1uXKgkjtSCwKkkb",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3l0CmX0FuQjFxr8SK7Vqag"
+          },
+          "href": "https://api.spotify.com/v1/artists/3l0CmX0FuQjFxr8SK7Vqag",
+          "id": "3l0CmX0FuQjFxr8SK7Vqag",
+          "name": "Clairo",
+          "type": "artist",
+          "uri": "spotify:artist:3l0CmX0FuQjFxr8SK7Vqag"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 190000,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/7BQWJDX9GGqq3D6ezggaqB"
+      },
+      "href": "https://api.spotify.com/v1/tracks/7BQWJDX9GGqq3D6ezggaqB",
+      "id": "7BQWJDX9GGqq3D6ezggaqB",
+      "is_playable": true,
+      "name": "Sinking",
+      "preview_url": null,
+      "track_number": 10,
+      "type": "track",
+      "uri": "spotify:track:7BQWJDX9GGqq3D6ezggaqB",
+      "is_local": false
+    },
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3l0CmX0FuQjFxr8SK7Vqag"
+          },
+          "href": "https://api.spotify.com/v1/artists/3l0CmX0FuQjFxr8SK7Vqag",
+          "id": "3l0CmX0FuQjFxr8SK7Vqag",
+          "name": "Clairo",
+          "type": "artist",
+          "uri": "spotify:artist:3l0CmX0FuQjFxr8SK7Vqag"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 416373,
+      "explicit": true,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6YTUGuz1IzqKFpNm0yGQws"
+      },
+      "href": "https://api.spotify.com/v1/tracks/6YTUGuz1IzqKFpNm0yGQws",
+      "id": "6YTUGuz1IzqKFpNm0yGQws",
+      "is_playable": true,
+      "name": "I Wouldn't Ask You",
+      "preview_url": null,
+      "track_number": 11,
+      "type": "track",
+      "uri": "spotify:track:6YTUGuz1IzqKFpNm0yGQws",
+      "is_local": false
+    }
+  ],
+  "limit": 20,
+  "next": null,
+  "offset": 0,
+  "previous": null,
+  "total": 11
+}
+
+Please provide a concise answer (1-2 sentences) to the question using the data from the API response. If the API response does not contain sufficient information to fully answer the question, indicate what information can be determined from the API response and specify any additional steps or parameters needed to answer the question completely.
+
+Please do not include any additional text or explanations beyond the answer.

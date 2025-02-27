@@ -1,0 +1,76 @@
+Based on the following information:
+
+**List of API Requests:**
+{api_requests}
+
+**Additional Information:**
+{additional_info}
+
+**Instructions:**
+1. Identify the first API requests from the list that can be executed immediately (i.e., they contain no placeholders).
+2. If none are executable as-is, identify the first API requests where placeholders can be filled using the additional information.
+3. Replace any placeholders in the selected API requests with the corresponding values from the additional information.
+4. **Output** a JSON object **mapping one question** to the **fully formed** (executable) API request.
+
+Important:
+- **Return only one valid JSON object** with one question as key and one final request as value.
+- Return the **exact same API request (with filled placeholders, if existing)**. Do not change other parts of the API Request, exact the placeholders.
+- **Do not include** any additional text, code fences, or explanations.
+- If multiple API requests can be executed, return only the first executable API request.
+- If none can be executed, **return an empty JSON object** (e.g. `{{}}`).
+
+### Example 1:
+
+**Input:**
+{{
+ "What is the Spotify ID of Hozier's latest album?": "https://api.spotify.com/v1/artists/{{artist-ID}}/albums?include_groups=album,single&market=US&limit=50"
+}}
+
+Additional Info:
+"The Spotify ID is 2FXC3k01G6Gw61bmprjgqS"
+
+
+**Output:**
+{{
+ "What is the Spotify ID of Hozier's latest album?": "https://api.spotify.com/v1/artists/2FXC3k01G6Gw61bmprjgqS/albums?include_groups=album,single&market=US&limit=50"
+}}
+
+---
+
+### Example 2:
+
+**Input:**
+{{
+  "What is the Spotify ID for Ed Sheeran?": "https://api.spotify.com/v1/search?q=Ed+Sheeran&type=artist&market=US&limit=1",
+  "What is the Spotify ID for the album 'Divide' by Ed Sheeran?": "https://api.spotify.com/v1/artists/{{artist-ID}}/albums?include_groups=album&market=US&limit=50",
+  "What is the release date of the album 'Divide'?": "https://api.spotify.com/v1/albums/{{album-ID}}?market=US"
+}}
+
+Additional Info:
+### The Spotify-ID from Ed Sheerean is ´6eUKZXaKkcviH0Ku9w2n3V´. 
+
+### The Spotify-ID from Ed Sheerean is ´6eUKZXaKkcviH0Ku9w2n3V´. ###
+
+
+**Output:**
+{{
+  "What is the Spotify ID for the album 'Divide' by Ed Sheeran?": "https://api.spotify.com/v1/artists/6eUKZXaKkcviH0Ku9w2n3V/albums?include_groups=album&market=US&limit=50"
+}}
+
+---
+
+### Example 3:
+
+**Input:**
+{{
+  "What is the Spotify ID for Taylor Swift?": "https://api.spotify.com/v1/search?q=Taylor+Swift&type=artist&market=US&limit=1",
+  "Can you find the top 10 tracks by Taylor Swift?": "https://api.spotify.com/v1/artists/{{artist-ID}}/top-tracks?market=US"
+}}
+
+Additional Info:
+
+
+**Output:**
+{{
+  "What is the Spotify ID for Taylor Swift?": "https://api.spotify.com/v1/search?q=Taylor+Swift&type=artist&market=US&limit=1"
+}}

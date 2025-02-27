@@ -1,0 +1,11 @@
+### Interpretation Prompt:
+
+Based on the following information:
+
+- **Question:** {question}
+- **Executed API Request:** {api_request}
+- **API Response:** {api_response}
+
+Please provide a concise answer (1-2 sentences) to the question using the data from the API response. If the API response does not contain sufficient information to fully answer the question, indicate what information can be determined from the API response and specify any additional steps or parameters needed to answer the question completely.
+
+Please do not include any additional text or explanations beyond the answer.

@@ -1,0 +1,178 @@
+### **Erweiterte Spotify Web API Dokumentation**
+
+1. **Search for Items**
+   - **Endpoint:** `https://api.spotify.com/v1/search`
+   - **Description:** The search_items endpoint is designed to search for albums, artists, playlists, tracks, shows, episodes, or audiobooks that match a given search term. Requests should be as precise as possible to ensure concise and relevant responses.
+   - **Important Parameters:**
+     - **`q`** (required): Your search query.
+     - **`type`** (required): Comma-separated list of item types (`album`, `artist`, `playlist`, `track`, `show`, `episode`, `audiobook`).
+     - **`market`**: ISO 3166-1 alpha-2 country code.
+     - **`limit`**: Maximum results per type.
+     - **`offset`**: Index of the first result (for pagination).
+   - **Example Request:**
+     ```
+     GET https://api.spotify.com/v1/search?q=Ed+Sheeran&type=artist&market=US&limit=1
+     ```
+
+---
+
+2. **Get Artist Information**
+   - **Endpoint:** `https://api.spotify.com/v1/artists/{id}`
+   - **Description:** Retrieves information about an artist by their Spotify ID.
+   - **Parameters:**
+     - **`id`** (required): The Spotify ID of the artist.
+     - **`market`**: ISO 3166-1 alpha-2 country code.
+   - **Example Request:**
+     ```
+     GET https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02?market=US
+     ```
+
+---
+
+3. **Get an Artist's Albums**
+   - **Endpoint:** `https://api.spotify.com/v1/artists/{id}/albums`
+   - **Description:** Retrieves the albums of an artist.
+   - **Parameters:**
+     - **`id`** (required): The Spotify ID of the artist.
+     - **`include_groups`**: Album types (`album`, `single`, `appears_on`, `compilation`).
+     - **`market`**: ISO 3166-1 alpha-2 country code.
+     - **`limit`**: Maximum results.
+     - **`offset`**: Index of the first result (for pagination).
+   - **Example Request:**
+     ```
+     GET https://api.spotify.com/v1/artists/{artist-ID}/albums?include_groups=album,single&market=US&limit=10
+     ```
+
+---
+
+4. **Get Album Information**
+   - **Endpoint:** `https://api.spotify.com/v1/albums/{id}`
+   - **Description:** Retrieves information about an album by its Spotify ID.
+   - **Parameters:**
+     - **`id`** (required): The Spotify ID of the album.
+     - **`market`**: ISO 3166-1 alpha-2 country code.
+   - **Example Request:**
+     ```
+     GET https://api.spotify.com/v1/albums/{album-ID}?market=US
+     ```
+
+---
+
+5. **Get Album Tracks**
+   - **Endpoint:** `https://api.spotify.com/v1/albums/{id}/tracks`
+   - **Description:** Retrieves the tracks of an album.
+   - **Parameters:**
+     - **`id`** (required): The Spotify ID of the album.
+     - **`market`**: ISO 3166-1 alpha-2 country code.
+     - **`limit`**: Maximum results.
+     - **`offset`**: Index of the first result (for pagination).
+   - **Example Request:**
+     ```
+     GET https://api.spotify.com/v1/albums/{album-ID}/tracks?market=US&limit=10&offset=0
+     ```
+
+---
+
+6. **Get Playlist Information**
+   - **Endpoint:** `https://api.spotify.com/v1/playlists/{playlist_id}`
+   - **Description:** Retrieves a playlist by its Spotify ID.
+   - **Parameters:**
+     - **`playlist_id`** (required): The Spotify ID of the playlist.
+     - **`market`**: ISO 3166-1 alpha-2 country code.
+     - **`fields`**: Filters for the query.
+     - **`additional_types`**: Additional item types supported.
+   - **Example Request:**
+     ```
+     GET https://api.spotify.com/v1/playlists/{playlist-ID}?market=US
+     ```
+
+---
+
+7. **Get User's Saved Albums**
+   - **Endpoint:** `https://api.spotify.com/v1/me/albums`
+   - **Description:** Retrieves a list of the albums saved in the current Spotify user's library.
+   - **Parameters:**
+     - **`market`**: ISO 3166-1 alpha-2 country code.
+     - **`limit`**: Maximum results.
+     - **`offset`**: Index of the first result.
+   - **Example Request:**
+     ```
+     GET https://api.spotify.com/v1/me/albums?market=US&limit=10
+     ```
+
+---
+
+8. **Get Show Episodes**
+   - **Endpoint:** `https://api.spotify.com/v1/shows/{id}/episodes`
+   - **Description:** Retrieves episodes for a specific show by Spotify ID.
+   - **Parameters:**
+     - **`id`** (required): The Spotify ID for the show.
+     - **`market`**: ISO 3166-1 alpha-2 country code.
+     - **`limit`**: Maximum results.
+     - **`offset`**: Index of the first result.
+   - **Example Request:**
+     ```
+     GET https://api.spotify.com/v1/shows/{show-ID}/episodes?market=US&limit=10
+     ```
+
+---
+
+9. **Get Show**
+   - **Endpoint:** `https://api.spotify.com/v1/shows/{id}`
+   - **Description:** Retrieves information for a single show by Spotify ID.
+   - **Parameters:**
+     - **`id`** (required): The Spotify ID for the show.
+     - **`market`**: ISO 3166-1 alpha-2 country code.
+   - **Example Request:**
+     ```
+     GET https://api.spotify.com/v1/shows/{show-ID}?market=US
+     ```
+
+---
+
+10. **Get User's Saved Shows**
+    - **Endpoint:** `https://api.spotify.com/v1/me/shows`
+    - **Description:** Retrieves a list of shows saved in the current Spotify user's library.
+    - **Parameters:**
+      - **`market`**: ISO 3166-1 alpha-2 country code.
+      - **`limit`**: Maximum results.
+      - **`offset`**: Index of the first result.
+    - **Example Request:**
+      ```
+      GET https://api.spotify.com/v1/me/shows?market=US&limit=10
+      ```
+
+---
+
+11. **Get Artist's Related Artists**
+    - **Endpoint:** `https://api.spotify.com/v1/artists/{id}/related-artists`
+    - **Description:** Retrieves Spotify catalog information about artists similar to a given artist. Similarity is based on analysis of the Spotify community's listening history.
+    - **Parameters:**
+      - **`id`** (required): The Spotify ID of the artist.
+    - **Response:**
+      - **`artists`** (array of ArtistObject): A list of related artists.
+        - **`external_urls`** (object): Known external URLs for this artist.
+        - **`followers`** (object): Information about the followers of the artist.
+        - **`genres`** (array of strings): Genres associated with the artist. If not yet classified, the array is empty.
+          - Example: `["Prog rock", "Grunge"]`
+        - **`href`** (string): A link to the Web API endpoint providing full details of the artist.
+        - **`id`** (string): The Spotify ID for the artist.
+        - **`images`** (array of ImageObject): Images of the artist in various sizes, widest first.
+        - **`name`** (string): The name of the artist.
+        - **`popularity`** (integer): Popularity score of the artist (0-100). Calculated from the popularity of all the artist's tracks.
+        - **`type`** (string): The object type. Allowed values: `"artist"`.
+        - **`uri`** (string): The Spotify URI for the artist.
+    - **Example Request:**
+      ```
+      GET https://api.spotify.com/v1/artists/{artist-ID}/related-artists
+      ```
+    - **Important Notes:**
+      - Spotify content may not be downloaded.
+      - Deprecated: This endpoint may not be supported in the future.
+      - Keep visual content in its original form and ensure content attribution.
+
+---
+
+**Important Notes:**
+- Use placeholders for parameters not immediately available. For example, replace `{id}` with the appropriate ID once it is retrieved.
+- The results of most endpoints are ranked by popularity. For example, when searching for albums by an artist, the API response is sorted by popularity (most popular first). This can help you with many questions when it comes to popularity, as you don't have to explicitly search for the most popular album, track, etc. It can also help you to keep the limit as small as possible, as you only need 1 element to find the most popular album, for example. 

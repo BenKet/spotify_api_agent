@@ -1,0 +1,6 @@
+# Sensitive environment variables
+.env
+
+# Bytecode and cache
+__pycache__/
+*.pyc

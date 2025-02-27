@@ -1,0 +1,60 @@
+### Interpretation Prompt:
+
+Based on the following information:
+
+- **Question:** No matching question found for the executed API request.
+- **Executed API Request:** https://api.spotify.com/v1/shows/7BTOsF2boKmlYr76BelijW/episodes?market=US&limit=1&sort=desc
+- **API Response:** {
+  "href": "https://api.spotify.com/v1/shows/7BTOsF2boKmlYr76BelijW/episodes?offset=0&limit=1&market=US",
+  "items": [
+    {
+      "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/6mnh9Dyxs391kpoHvzR3dD/clip_236846_296846.mp3",
+      "description": "Guten Tag! Na, ihr ledigen Singles? In dieser Woche habt ihr die Wahl zwischen Hackh\u00f6ren und nicht Hackh\u00f6ren. Wir empfehlen Ersteres. Wann kriegen die Biber endlich ihr Geld? Looking at you, Tschechien! Wieso gibt es keine Bank\u00fcberf\u00e4lle mehr? Und ist dir das Risiko nicht zu hoch, ASAP Rocky? Naja. Musst du wissen.. diese Folge kommt schneller zur\u00fcck ins Ohr als der Graf von Unheilig! Let\u2019s goooo Learn more about your ad choices. Visit podcastchoices.com/adchoices",
+      "duration_ms": 5110890,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/episode/0exLt639lUVHwxa5BiA1Sj"
+      },
+      "href": "https://api.spotify.com/v1/episodes/0exLt639lUVHwxa5BiA1Sj",
+      "html_description": "<p>Guten Tag! Na, ihr ledigen Singles? In dieser Woche habt ihr die Wahl zwischen Hackh\u00f6ren und nicht Hackh\u00f6ren. Wir empfehlen Ersteres. Wann kriegen die Biber endlich ihr Geld? Looking at you, Tschechien! Wieso gibt es keine Bank\u00fcberf\u00e4lle mehr? Und ist dir das Risiko nicht zu hoch, ASAP Rocky? Naja. Musst du wissen.. diese Folge kommt schneller zur\u00fcck ins Ohr als der Graf von Unheilig! Let\u2019s goooo</p><p> </p><p>Learn more about your ad choices. Visit <a href=\"https://podcastchoices.com/adchoices\" rel=\"nofollow\">podcastchoices.com/adchoices</a></p>",
+      "id": "0exLt639lUVHwxa5BiA1Sj",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6765630000ba8a58a95deb576c59fafd14cf08",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67656300005f1f58a95deb576c59fafd14cf08",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab6765630000f68d58a95deb576c59fafd14cf08",
+          "width": 64
+        }
+      ],
+      "is_externally_hosted": false,
+      "is_playable": true,
+      "language": "de",
+      "languages": [
+        "de"
+      ],
+      "name": "#289 ABSEXEN",
+      "release_date": "2025-02-18",
+      "release_date_precision": "day",
+      "type": "episode",
+      "uri": "spotify:episode:0exLt639lUVHwxa5BiA1Sj"
+    }
+  ],
+  "limit": 1,
+  "next": "https://api.spotify.com/v1/shows/7BTOsF2boKmlYr76BelijW/episodes?offset=1&limit=1&market=US",
+  "offset": 0,
+  "previous": null,
+  "total": 306
+}
+
+Please provide a concise answer (1-2 sentences) to the question using the data from the API response. If the API response does not contain sufficient information to fully answer the question, indicate what information can be determined from the API response and specify any additional steps or parameters needed to answer the question completely.
+
+Please do not include any additional text or explanations beyond the answer.

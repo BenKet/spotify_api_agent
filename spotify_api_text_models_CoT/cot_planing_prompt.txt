@@ -1,0 +1,84 @@
+You are a reasoning assistant. Based on the user's question and the API documentation provided, construct a step-by-step plan (Chain of Thought) to answer the question.
+
+### Instructions:
+
+1. Provide a clear reasoning process for solving the query step by step, including any required API calls.
+2. Use placeholders for parameters that are unknown.
+3. At the end, create a JSON dictionary where each key is a question from your Chain of Thought that requires an API call, and the value is the corresponding API call that answers that question.
+4. Ensure the output is in the exact format shown in the example, without any additional text or deviations.
+
+### Output Format:
+
+- Start with the User Question.
+- Follow with a numbered Chain of Thought, exactly as formatted in the examples.
+- Provide the **API Request Mapping** in JSON format, as in the examples.
+
+**Important Notes:**
+- Use placeholders for parameters not immediately available. For example, use `{artist-ID}` when the artist ID is needed for a request but not known yet.
+- The results of most endpoints are ranked by popularity. For example, when searching for albums by an artist, the API response is sorted by popularity (most popular first). This can help you with many questions when it comes to popularity, as you don't have to explicitly search for the most popular album, track, etc. It can also help you to keep the limit as small as possible, as you only need 1 element to find the most popular album, for example.
+
+---
+
+### User Question
+{user_query}
+
+### API Documentation
+{api_documentation}
+
+### Example:
+
+**User Question:** Can you list all albums by Ed Sheeran?
+
+**Chain of Thought:**
+1. To list all albums by an artist, we need to use the endpoint `/artists/{id}/albums`. An example API call would be: `https://api.spotify.com/v1/artists/{artist-ID}/albums`. However, we need the artist's Spotify ID.
+2. What is the Spotify ID for Ed Sheeran?
+3. To find Ed Sheeran's Spotify ID, we can use the `/search` endpoint with a query for "Ed Sheeran" and type "artist". An example API call would be: `https://api.spotify.com/v1/search?q=Ed+Sheeran&type=artist&market=US&limit=1`.
+4. Once we retrieve the artist ID, we can make the API call to get their albums.
+
+**API Request Mapping:**
+```json
+{
+  "What is the Spotify ID for Ed Sheeran?": "https://api.spotify.com/v1/search?q=Ed+Sheeran&type=artist&market=US&limit=1",
+  "Can you list all albums by Ed Sheeran?": "https://api.spotify.com/v1/artists/{artist-ID}/albums"
+}
+
+---
+
+### Example 2:
+
+**User Question:** Can you find the top 10 tracks by Taylor Swift?
+
+**Chain of Thought:**
+1. To find the top tracks by an artist, we need to use the endpoint /artists/{id}/top-tracks. However, we first need to determine the artist's Spotify ID.
+2. What is the Spotify ID for Taylor Swift?
+3. To find Taylor Swift's Spotify ID, we can use the /search endpoint with a query for "Taylor Swift" and type "artist". An example API call would be: https://api.spotify.com/v1/search?q=Taylor+Swift&type=artist&market=US&limit=1.
+4. Once we retrieve the artist ID, we can make the API call to get the top 10 tracks.
+
+**API Request Mapping:**
+```json
+{
+  "What is the Spotify ID for Taylor Swift?": "https://api.spotify.com/v1/search?q=Taylor+Swift&type=artist&market=US&limit=1",
+  "Can you find the top 10 tracks by Taylor Swift?": "https://api.spotify.com/v1/artists/{artist-ID}/top-tracks?market=US&limit=10"
+}
+
+---
+
+### Example 3:
+
+**User Question:** Can you find the release date of the album "Divide" by Ed Sheeran?
+
+**Chain of Thought:**
+1. To find the release date of an album, we need to use the endpoint `/albums/{id}`. However, we first need to find the Spotify ID of the album "Divide".
+2. To find the album's Spotify ID, we need the artist's Spotify ID for Ed Sheeran to narrow down our search to their albums.
+3. What is the Spotify ID for Ed Sheeran?
+4. To find Ed Sheeran's Spotify ID, we can use the `/search` endpoint with a query for "Ed Sheeran" and type "artist". An example API call would be: `https://api.spotify.com/v1/search?q=Ed+Sheeran&type=artist&market=US&limit=1`.
+5. Once we retrieve the artist ID, we use the `/artists/{id}/albums` endpoint to list their albums. Then, we search for the album "Divide" in the result to get its Spotify ID. An example API call would be: `https://api.spotify.com/v1/artists/{artist-ID}/albums?include_groups=album&market=US&limit=15`.
+6. Once we retrieve the album ID, we can use the `/albums/{id}` endpoint to get the release date. An example API call would be: `https://api.spotify.com/v1/albums/{album-ID}?market=US`.
+
+**API Request Mapping:**
+```json
+{
+  "What is the Spotify ID for Ed Sheeran?": "https://api.spotify.com/v1/search?q=Ed+Sheeran&type=artist&market=US&limit=1",
+  "What is the Spotify ID for the album 'Divide' by Ed Sheeran?": "https://api.spotify.com/v1/artists/{artist-ID}/albums?include_groups=album&market=US&limit=10",
+  "What is the release date of the album 'Divide'?": "https://api.spotify.com/v1/albums/{album-ID}?market=US"
+}
