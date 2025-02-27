@@ -1,5 +1,6 @@
 # Sensitive environment variables
 .env
+.gitignore
 
 # Bytecode and cache
 __pycache__/
